@@ -70,6 +70,26 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
   const busyRef = useRef(false);
   const itemEntranceTweenRef = useRef<gsap.core.Tween | null>(null);
+  const [magneticPosition, setMagneticPosition] = useState({ x: 0, y: 0 });
+
+  // Magnetic effect for menu button
+  const handleButtonMouseMove = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    const button = toggleBtnRef.current;
+    if (!button) return;
+
+    const rect = button.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const deltaX = (e.clientX - centerX) * 0.3;
+    const deltaY = (e.clientY - centerY) * 0.3;
+
+    setMagneticPosition({ x: deltaX, y: deltaY });
+  }, []);
+
+  const handleButtonMouseLeave = useCallback(() => {
+    setMagneticPosition({ x: 0, y: 0 });
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -406,7 +426,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           aria-expanded={open}
           aria-controls="staggered-menu-panel"
           onClick={toggleMenu}
+          onMouseMove={handleButtonMouseMove}
+          onMouseLeave={handleButtonMouseLeave}
           type="button"
+          style={{
+            transform: `translate(${magneticPosition.x}px, ${magneticPosition.y}px)`,
+            transition: 'transform 0.3s ease',
+          }}
         >
           <span ref={textWrapRef} className="sm-toggle-textWrap" aria-hidden="true">
             <span ref={textInnerRef} className="sm-toggle-textInner">
