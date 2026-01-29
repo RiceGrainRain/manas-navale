@@ -138,24 +138,36 @@ function App() {
                 fontWeight: '400',
                 letterSpacing: '0.2em',
                 marginBottom: '48px',
-                color: 'rgba(255, 255, 255, 0.5)',
                 textTransform: 'uppercase',
               }}
             >
-              01 - About Me
+              <span style={{ color: '#d63030' }}>01</span>
+              <span style={{ color: 'rgba(255, 255, 255, 0.86)' }}> About Me</span>
             </h2>
 
-            <Typewriter
-              text="I'm a passionate software engineer with a deep interest in building elegant, performant web applications. With expertise in modern web technologies and a keen eye for design, I strive to create digital experiences that are both functional and beautiful. My journey in tech has been driven by curiosity and a constant desire to learn and push the boundaries of what's possible. When I'm not coding, you'll find me exploring new technologies, contributing to open source, or working on side projects that challenge my skills and creativity."
-              speed={20}
+            <div
               style={{
                 fontSize: '18px',
                 lineHeight: '1.8',
                 color: 'rgba(255, 255, 255, 0.85)',
                 fontWeight: '300',
                 maxWidth: '700px',
+                borderLeft: '2px solid #d63030',
+                paddingLeft: '32px',
               }}
-            />
+            >
+              <p style={{ marginBottom: '24px' }}>
+                I am a software engineer driven by curiosity and a love for learning how systems work.
+              </p>
+
+              <p style={{ marginBottom: '24px' }}>
+                I actually got into software engineering by complete accident. A friend broke my brand new laptop, my parents were not buying a replacement, and I ended up with a $100 machine that could not even run Windows. So I installed Linux. I began distro hopping out of curiosity, experimenting with different setups to understand how Linux actually works, and eventually landed on Arch Linux. Setting up Arch back then felt genuinely difficult with no prior background, but looking back now, it seems simple. That early challenge pushed me to understand systems instead of just using them.
+              </p>
+
+              <p>
+                That curiosity carried into hackathons, where I started out doing frontend work and gradually expanded into fullstack development, security, and research. Since then, I have been involved in all kinds of development and am always hungry to learn more.
+              </p>
+            </div>
           </div>
         </div>
       </div>
