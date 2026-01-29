@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Dither from './components/dither'
+import DecryptedText from './components/decrypted_text'
+import { StaggeredMenu } from './components/staggered_menu'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Dither />
+      <StaggeredMenu
+        isFixed={true}
+        colors={['#450000', '#7f0000', '#bd0000']}
+        accentColor="#bd0000"
+        menuButtonColor="#ffffff"
+        openMenuButtonColor="#000000"
+        changeMenuColorOnOpen={true}
+        items={[
+          { label: 'Home', ariaLabel: 'Go to Home', link: '#' },
+          { label: 'About', ariaLabel: 'Go to About', link: '#about' },
+          { label: 'Work', ariaLabel: 'Go to Work', link: '#work' },
+          { label: 'Projects', ariaLabel: 'Go to Contact', link: '#contact' }
+        ]}
+        socialItems={[
+          { label: 'GitHub', link: 'https://github.com/RiceGrainRain' },
+          { label: 'LinkedIn', link: 'https://linkedin.com/in/manas-navale' },
+        ]}
+      />
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 5 }}>
+        <DecryptedText
+          text="Hi, I'm Manas Navale"
+          className="text-white text-6xl font-bold"
+          encryptedClassName="text-white text-6xl font-bold"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
