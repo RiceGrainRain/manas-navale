@@ -55,8 +55,8 @@ interface LiquidEtherWebGL {
 const defaultColors = ['#5227FF', '#FF9FFC', '#B19EEF'];
 
 export default function LiquidEther({
-  mouseForce = 20,
-  cursorSize = 100,
+  mouseForce = 30,
+  cursorSize = 120,
   isViscous = false,
   viscous = 30,
   iterationsViscous = 32,
@@ -121,7 +121,7 @@ export default function LiquidEther({
       height = 0;
       aspect = 1;
       pixelRatio = 1;
-      isMobile = false;
+      isMobile = true;
       breakpoint = 768;
       fboWidth: number | null = null;
       fboHeight: number | null = null;
