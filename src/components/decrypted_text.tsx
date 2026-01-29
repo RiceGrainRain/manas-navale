@@ -27,7 +27,7 @@ export default function DecryptedText({
   className = '',
   parentClassName = '',
   encryptedClassName = '',
-  animateOn = 'view',
+  animateOn = 'both',
   ...props
 }: DecryptedTextProps) {
   const [displayText, setDisplayText] = useState<string>(text);
