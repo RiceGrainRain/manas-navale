@@ -67,7 +67,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
         </h1>
 
         {/* Social Media Icons */}
-        <div style={{ display: 'flex', gap: '24px', marginTop: '48px', fontSize: '24px' }}>
+        <div style={{ display: 'flex', gap: '24px', marginTop: '32px', fontSize: '36px' }}>
           <a
             href="https://github.com/yourusername"
             target="_blank"

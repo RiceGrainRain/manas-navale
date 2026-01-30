@@ -4,6 +4,7 @@ import { StaggeredMenu } from './components/staggered_menu'
 import HomeSection from './components/home_section'
 import AboutSection from './components/about_section'
 import WorkExperienceSection from './components/work_experience_section'
+import ProjectsSection from './components/projects_section'
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
       company: 'UNT',
       position: 'Computational Neuroscience Research Assistant',
       image: '/src/assets/UNT.jpg',
-      description: 'My first experience working in a formal team. In this project, I helped build VEGS, a virtual environment grocery store used for computational neuroscience research. I remember my first contribution was upgrading the controls to use FPS-style camera and movement. Shortly after, I was told by the project lead that the change was unnecessary and incompatible with the VR control scheme.That moment stuck with me. It forced me to step back and understand the goals of the project beyond just improving controls. From there, I focused on building features that supported the research itself, working in Unity to help create a stable, realistic environment and contributing to data workflows used to process neuroimaging results. Overall, this experience taught me how to take feedback, align my work with user and research needs, and contribute effectively within a multidisciplinary team.'
+      description: 'My first experience working in a formal team. In this project, I helped build VEGS, a virtual environment grocery store used for computational neuroscience research. I remember my first contribution was upgrading the controls to use FPS-style camera and movement. Shortly after, I was told by the project lead that the change was unnecessary and incompatible with the VR control scheme. That moment stuck with me. It forced me to step back and understand the goals of the project beyond just improving controls. From there, I focused on building features that supported the research itself, working in Unity to help create a stable, realistic environment and contributing to data workflows used to process neuroimaging results. Overall, this experience taught me how to take feedback, align my work with user and research needs, and contribute effectively within a multidisciplinary team.'
     }
   ];
 
@@ -61,7 +62,7 @@ function App() {
           { label: 'Home', ariaLabel: 'Go to Home', link: '#home' },
           { label: 'About', ariaLabel: 'Go to About', link: '#about' },
           { label: 'Work', ariaLabel: 'Go to Work', link: '#work' },
-          { label: 'Projects', ariaLabel: 'Go to Contact', link: '#contact' }
+          { label: 'Projects', ariaLabel: 'Go to Projects', link: '#projects-section' }
         ]}
         socialItems={[
           { label: 'GitHub', link: 'https://github.com/RiceGrainRain' },
@@ -72,6 +73,7 @@ function App() {
       <HomeSection parallaxOffset={parallaxOffset} />
       <AboutSection />
       <WorkExperienceSection workExperiences={workExperiences} />
+      <ProjectsSection />
     </div>
   )
 }

@@ -47,6 +47,7 @@ export default function WorkExperienceSection({ workExperiences }: WorkExperienc
         backgroundColor: '#000000',
         zIndex: 10,
         padding: '120px 40px 80px',
+        marginTop: '-300px',
         transform: workVisible ? 'translateY(0)' : 'translateY(30px)',
         opacity: workVisible ? 1 : 0,
         transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',

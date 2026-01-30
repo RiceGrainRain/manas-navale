@@ -1,0 +1,333 @@
+.projects-section {
+  min-height: 500vh; /* Extended height for scroll-driven content with larger paragraphs */
+  position: relative;
+  background: #000000;
+  padding: 0;
+  z-index: 20;
+}
+
+.projects-container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  z-index: 20;
+  padding: 0;
+}
+
+/* Left Column - Text Panel */
+.projects-text-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem 4rem 3rem 6rem;
+  background: #000000;
+  position: relative;
+}
+
+.projects-section-label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.section-number {
+  color: #d63030;
+}
+
+.section-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.projects-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 3rem 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  line-height: 0.95;
+}
+
+.projects-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Fixed editorial content block */
+.projects-content-block {
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+.active-project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.project-index {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.project-main-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #d63030;
+  line-height: 1.2;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Inactive projects stacked below */
+.inactive-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.01rem;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inactive-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 0.125rem 0;
+}
+
+.inactive-title {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+}
+
+.inactive-year {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -4px;
+  right: -4px;
+  bottom: -8px;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.indicator.active {
+  background: #d63030;
+  width: 60px;
+}
+
+/* Right Column - Visual Panel */
+.projects-visual-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 7h10v10'/%3E%3Cpath d='M7 17L17 7'/%3E%3C/svg%3E") 12 12, pointer;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  will-change: filter;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.project-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .projects-text-panel {
+    padding: 6rem 4rem 6rem 6rem;
+  }
+
+  .projects-visual-panel {
+    padding: 0;
+  }
+
+  .projects-title {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .projects-section {
+    min-height: 600vh; /* More height for mobile stacking */
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .projects-text-panel {
+    padding: 4rem 2rem;
+    min-height: 50vh;
+    justify-content: flex-start;
+  }
+
+  .projects-visual-panel {
+    padding: 0;
+    min-height: 50vh;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .project-year {
+    margin-top: 0.25rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .project-image-container {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-text-panel {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-visual-panel {
+    padding: 0;
+  }
+
+  .projects-title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-number-title {
+    gap: 1rem;
+  }
+
+  .project-title-text {
+    font-size: 1.5rem;
+  }
+
+  .project-image-container {
+    max-height: 400px;
+  }
+
+  .projects-indicators {
+    margin-top: 3rem;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 30px;
+  }
+
+  .indicator.active {
+    width: 50px;
+  }
+}
