@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "VAGABOND",
     year: "2026",
     description: "My latest project! Vagabond is a real-time AI incident copilot you built using Cloudflare Workers & Durable Objects that lets teams collaborate live during outages or security incidents, chat with an LLM, and generate structured incident artifacts together in one shared room. It combines WebSockets for instant sync, Cloudflare’s AI (a LLaMA-3.3 model) for both conversational and structured playbook outputs, and a modern React/TypeScript front end, all running on scalable edge infrastructure. What makes it unique is how it blends live collaboration, durable incident state, and AI assistance into a seamless tool that feels like a live incident command center rather than just another chat with a bot.",
-    image: "/src/assets/vagabond.jpg",
+    image: "/assets/vagabond.JPG",
     link: "https://github.com/RiceGrainRain/cf_ai_vagabond/",
     tags: [
       { name: "Cloudflare Workers", color: "#F38020" },
@@ -35,7 +35,7 @@ const projects: Project[] = [
     title: "BIRDBOOK",
     year: "2025",
     description: "My latest hackathon win! BirdBook is a hackathon-built machine learning web app that lets users upload a photo of a bird and receive the predicted species, confidence score, and additional context, with each result saved into an interactive scrapbook. It combines a computer vision model with a modern Next.js and Tailwind frontend to make bird identification feel approachable rather than academic. What makes BirdBook unique is how it turns image classification into an engaging experience focused on learning and conservation, not just raw predictions.",
-    image: "/src/assets/birdbook.jpg",
+    image: "/assets/birdbook.jpg",
     link: "https://devpost.com/software/birdbook",
     tags: [
       { name: "TypeScript", color: "#3178C6" },
@@ -51,7 +51,7 @@ const projects: Project[] = [
     title: "TECHNICIAN TERRY",
     year: "2024",
     description: "I've always enjoyed playing video games- with some of my favorites being Dark Souls 3, Baldur's Gate 3, and Last of Us 2. After the failure that was Gnome Quest(sequel otw), our indie game company, GROUNDBREAKING studios, made Technician Terry for the BIGMODE game jam. Technician Terry is a 2D puzzle-platformer where you play as Terry, an underpaid worker trying to power all the generators in a compound by managing cables and tools across 17 clever levels plus bonus SUPERMAX challenges.",
-    image: "/src/assets/techterry.png",
+    image: "/assets/techterry.png",
     link: "https://neolog.itch.io/technician-terry",
     tags: [
       { name: "Godot", color: "#478CBF" }
@@ -63,7 +63,7 @@ const projects: Project[] = [
     title: "VPOST",
     year: "2023",
     description: "Vpost is my first solo coding project and a Flutter-based app that helps users discover volunteering opportunities that match their interests and goals. It brings opportunity search into a mobile experience with a clean UI and personal focus, making community engagement feel easier and more fun for people just getting started with volunteering. What makes it special is how it combines my early mobile development skills with a real-world purpose, turning something I care about into a tool that helps others connect with meaningful ways to give back.",
-    image: "/src/assets/vpost.jpg",
+    image: "/assets/vpost.jpg",
     link: "/projects/ethereal-portfolio",
     tags: [
       { name: "Flutter", color: "#02569B" },
@@ -76,7 +76,7 @@ const projects: Project[] = [
     title: "FLASH NOTES",
     year: "2023",
     description: "Flash Notes is my first hackathon win. After spending most of our time building a rust game engine, my team pivoted towards the end of the hackathon to building Flash Notes. Flash Notes turns the notes you write into automatic study tests using GPT-3(this was a gpt wrapper way before gpt wrappers were popular), helping you quiz yourself without spending time making questions manually. ",
-    image: "src/assets/flashnotes.avif",
+    image: "/assets/flashnotes.avif",
     link: "/projects/kinetic-data-viz",
     tags: [
       { name: "React", color: "#61DAFB" },
