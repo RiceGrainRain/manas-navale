@@ -41,7 +41,6 @@ const projects: Project[] = [
       { name: "TypeScript", color: "#3178C6" },
       { name: "Next.js", color: "#EAB308" },
       { name: "Flask", color: "#F38020" },
-      { name: "Jinja2", color: "#B41717" },
       { name: "SQLite", color: "#003B57" },
       { name: "PyTorch", color: "#EE4C2C" }
     ]
