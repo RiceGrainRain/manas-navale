@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import LiquidEther from './components/liquid_ether'
 import { StaggeredMenu } from './components/staggered_menu'
 import HomeSection from './components/home_section'
@@ -77,6 +78,7 @@ function App() {
       <WorkExperienceSection workExperiences={workExperiences} />
       <ProjectsSection />
       <ContactSection />
+      <Analytics />
     </div>
   )
 }
