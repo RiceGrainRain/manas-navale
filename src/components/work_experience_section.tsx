@@ -95,7 +95,6 @@ export default function WorkExperienceSection({ workExperiences }: WorkExperienc
               // Find which position this card should be in relative to expanded card
               const expandedIdx = workExperiences.findIndex(w => w.id === expandedCard);
               const currentIdx = workExperiences.findIndex(w => w.id === work.id);
-              const totalCards = workExperiences.length;
 
               // Calculate circular distance
               let distance = currentIdx - expandedIdx;
