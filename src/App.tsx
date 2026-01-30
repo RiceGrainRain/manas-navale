@@ -69,7 +69,6 @@ function App() {
         socialItems={[
           { label: 'GitHub', link: 'https://github.com/RiceGrainRain' },
           { label: 'LinkedIn', link: 'https://linkedin.com/in/manas-navale' },
-          { label: 'Resume', link: '/src/assets/Manas_Navale_Resume.pdf' },
         ]}
       />
 

@@ -17,7 +17,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        padding: '0 8vw',
+        padding: '0 clamp(20px, 8vw, 8vw)',
         zIndex: 1,
       }}
     >
@@ -67,7 +67,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
         </h1>
 
         {/* Social Media Icons */}
-        <div style={{ display: 'flex', gap: '24px', marginTop: '32px', fontSize: '36px' }}>
+        <div style={{ display: 'flex', gap: 'clamp(16px, 3vw, 24px)', marginTop: 'clamp(20px, 4vw, 32px)', fontSize: 'clamp(28px, 5vw, 36px)' }}>
           <a
             href="https://github.com/RiceGrainRain"
             target="_blank"

@@ -91,7 +91,7 @@ export default function ContactSection() {
           <div>
             <h3 className="text-xs uppercase tracking-[0.2em] text-black/50 mb-3">Email</h3>
             <a
-              href="navalemanas19@gmail.com"
+              href="mailto:navalemanas19@gmail.com"
               className="text-xl text-black hover:text-[#d63030] transition-colors duration-300 block break-all"
             >
               navalemanas19@gmail.com

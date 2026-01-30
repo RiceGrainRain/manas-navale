@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "VAGABOND",
     year: "2026",
     description: "My latest project! Vagabond is a real-time AI incident copilot you built using Cloudflare Workers & Durable Objects that lets teams collaborate live during outages or security incidents, chat with an LLM, and generate structured incident artifacts together in one shared room. It combines WebSockets for instant sync, Cloudflare’s AI (a LLaMA-3.3 model) for both conversational and structured playbook outputs, and a modern React/TypeScript front end, all running on scalable edge infrastructure. What makes it unique is how it blends live collaboration, durable incident state, and AI assistance into a seamless tool that feels like a live incident command center rather than just another chat with a bot.",
-    image: "/src/assets/vagabond.webp",
+    image: "/src/assets/vagabond.jpg",
     link: "https://github.com/RiceGrainRain/cf_ai_vagabond/",
     tags: [
       { name: "Cloudflare Workers", color: "#F38020" },
@@ -76,7 +76,7 @@ const projects: Project[] = [
     title: "FLASH NOTES",
     year: "2023",
     description: "Flash Notes is my first hackathon win. After spending most of our time building a rust game engine, my team pivoted towards the end of the hackathon to building Flash Notes. Flash Notes turns the notes you write into automatic study tests using GPT-3(this was a gpt wrapper way before gpt wrappers were popular), helping you quiz yourself without spending time making questions manually. ",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    image: "src/assets/flashnotes.avif",
     link: "/projects/kinetic-data-viz",
     tags: [
       { name: "React", color: "#61DAFB" },
@@ -90,6 +90,14 @@ export default function ProjectsSection() {
   const [activeProject, setActiveProject] = useState(0);
   const [hoveredImage, setHoveredImage] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  // Preload all project images
+  useEffect(() => {
+    projects.forEach((project) => {
+      const img = new Image();
+      img.src = project.image;
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -227,7 +235,12 @@ export default function ProjectsSection() {
             {projects.map((project, index) => {
               if (index === activeProject) return null;
               return (
-                <div key={project.id} className="inactive-project">
+                <div
+                  key={project.id}
+                  className="inactive-project"
+                  onClick={() => setActiveProject(index)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <span className="inactive-title">{project.title}</span>
                   <span className="inactive-year">{project.year}</span>
                 </div>

@@ -33,12 +33,9 @@ export default function AboutSection() {
         minHeight: '100vh',
         backgroundColor: '#000000',
         zIndex: 10,
-        padding: '120px 40px 80px',
+        padding: 'clamp(60px, 15vw, 120px) clamp(20px, 5vw, 40px) clamp(40px, 10vw, 80px)',
         borderRadius: '50% 50% 0 0 / 80px 80px 0 0',
-        marginTop: '-80px',
-        transform: aboutVisible ? 'translateY(0)' : 'translateY(30px)',
-        opacity: aboutVisible ? 1 : 0,
-        transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+        marginTop: 'clamp(-40px, -10vw, -80px)',
       }}
     >
       <div ref={contentRef} style={{ maxWidth: '800px', margin: '0 auto' }}>

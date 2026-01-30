@@ -32,8 +32,16 @@ export default function WorkCard({
       style={{
         position: 'absolute',
         left: '50%',
-        width: isExpanded ? '800px' : isPeeking ? '250px' : '400px',
-        height: isExpanded ? '600px' : isPeeking ? '350px' : '400px',
+        width: isExpanded
+          ? 'clamp(300px, 90vw, 800px)'
+          : isPeeking
+          ? 'clamp(180px, 30vw, 250px)'
+          : 'clamp(280px, 50vw, 400px)',
+        height: isExpanded
+          ? 'clamp(500px, 80vh, 600px)'
+          : isPeeking
+          ? 'clamp(300px, 45vh, 350px)'
+          : 'clamp(350px, 50vh, 400px)',
         overflow: 'hidden',
         cursor: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 7h10v10'/%3E%3Cpath d='M7 17L17 7'/%3E%3C/svg%3E\") 12 12, pointer",
         borderRadius: '12px',
@@ -85,7 +93,7 @@ export default function WorkCard({
         style={{
           position: 'absolute',
           inset: 0,
-          padding: '32px',
+          padding: 'clamp(20px, 4vw, 32px)',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
@@ -118,13 +126,13 @@ export default function WorkCard({
           </p>
           <h3
             style={{
-              fontSize: isExpanded ? '36px' : '32px',
+              fontSize: isExpanded ? 'clamp(24px, 5vw, 36px)' : 'clamp(22px, 4.5vw, 32px)',
               fontWeight: '700',
               transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
               textTransform: 'uppercase',
               letterSpacing: '-0.02em',
               lineHeight: '1',
-              marginBottom: isExpanded ? '24px' : '0',
+              marginBottom: isExpanded ? 'clamp(16px, 3vw, 24px)' : '0',
             }}
           >
             {work.company}

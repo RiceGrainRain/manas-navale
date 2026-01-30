@@ -371,4 +371,16 @@
   .staggered-menu-wrapper[data-open] .sm-logo-img {
     filter: invert(100%);
   }
+
+  .staggered-menu-header {
+    padding: 1.5em 1em;
+  }
+
+  .sm-toggle {
+    font-size: 14px;
+  }
+
+  .sm-panel-item {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
 }

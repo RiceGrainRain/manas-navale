@@ -46,14 +46,17 @@ export default function WorkExperienceSection({ workExperiences }: WorkExperienc
         minHeight: '100vh',
         backgroundColor: '#000000',
         zIndex: 10,
-        padding: '120px 40px 80px',
-        marginTop: '-300px',
+        padding: 'clamp(60px, 15vw, 120px) clamp(20px, 5vw, 40px) clamp(40px, 10vw, 80px)',
+        marginTop: 'clamp(-150px, -30vw, -300px)',
+      }}
+    >
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
         transform: workVisible ? 'translateY(0)' : 'translateY(30px)',
         opacity: workVisible ? 1 : 0,
         transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
-      }}
-    >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      }}>
         <h2
           style={{
             fontSize: '14px',
@@ -74,10 +77,11 @@ export default function WorkExperienceSection({ workExperiences }: WorkExperienc
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: '32px',
+          gap: 'clamp(16px, 4vw, 32px)',
           transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
           position: 'relative',
-          height: '650px',
+          height: 'clamp(500px, 80vh, 650px)',
+          flexWrap: 'wrap',
         }}>
           {workExperiences.map((work) => {
             const isExpanded = expandedCard === work.id;
