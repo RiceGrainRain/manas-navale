@@ -51,7 +51,7 @@ const projects: Project[] = [
     number: "03",
     title: "TECHNICIAN TERRY",
     year: "2024",
-    description: "I've always enjoyed playing video games- with some of my favorites being Dark Souls 3, Baldur's Gate 3, and Last of US 2. After the failure that was Gnome Quest(sequel otw), our indie game company, GROUNDBREAKING studios, made Technician Terry for the BIGMODE game jam. Technician Terry is a 2D puzzle-platformer where you play as Terry, an underpaid worker trying to power all the generators in a compound by managing cables and tools across 17 clever levels plus bonus SUPERMAX challenges.",
+    description: "I've always enjoyed playing video games- with some of my favorites being Dark Souls 3, Baldur's Gate 3, and Last of Us 2. After the failure that was Gnome Quest(sequel otw), our indie game company, GROUNDBREAKING studios, made Technician Terry for the BIGMODE game jam. Technician Terry is a 2D puzzle-platformer where you play as Terry, an underpaid worker trying to power all the generators in a compound by managing cables and tools across 17 clever levels plus bonus SUPERMAX challenges.",
     image: "/src/assets/techterry.png",
     link: "https://neolog.itch.io/technician-terry",
     tags: [

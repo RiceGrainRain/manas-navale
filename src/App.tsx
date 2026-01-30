@@ -5,6 +5,7 @@ import HomeSection from './components/home_section'
 import AboutSection from './components/about_section'
 import WorkExperienceSection from './components/work_experience_section'
 import ProjectsSection from './components/projects_section'
+import ContactSection from './components/contact_section'
 
 
 function App() {
@@ -62,11 +63,13 @@ function App() {
           { label: 'Home', ariaLabel: 'Go to Home', link: '#home' },
           { label: 'About', ariaLabel: 'Go to About', link: '#about' },
           { label: 'Work', ariaLabel: 'Go to Work', link: '#work' },
-          { label: 'Projects', ariaLabel: 'Go to Projects', link: '#projects-section' }
+          { label: 'Projects', ariaLabel: 'Go to Projects', link: '#projects-section' },
+          { label: 'Contact', ariaLabel: 'Go to Contact', link: '#contact' }
         ]}
         socialItems={[
           { label: 'GitHub', link: 'https://github.com/RiceGrainRain' },
           { label: 'LinkedIn', link: 'https://linkedin.com/in/manas-navale' },
+          { label: 'Resume', link: '/src/assets/Manas_Navale_Resume.pdf' },
         ]}
       />
 
@@ -74,6 +77,7 @@ function App() {
       <AboutSection />
       <WorkExperienceSection workExperiences={workExperiences} />
       <ProjectsSection />
+      <ContactSection />
     </div>
   )
 }

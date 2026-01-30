@@ -69,7 +69,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
         {/* Social Media Icons */}
         <div style={{ display: 'flex', gap: '24px', marginTop: '32px', fontSize: '36px' }}>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/RiceGrainRain"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -82,7 +82,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/manas-navale"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -95,7 +95,7 @@ export default function HomeSection({ parallaxOffset }: HomeSectionProps) {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:navalemanas19@gmail.com"
             style={{
               color: 'white',
               transition: 'color 0.3s ease',
