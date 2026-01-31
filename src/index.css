@@ -20,6 +20,17 @@ html, body, #root {
   overflow-x: hidden;
 }
 
+/* Red cursor for white background sections */
+#contact,
+.staggered-menu-panel {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='3' fill='%23d63030'/%3E%3C/svg%3E") 8 8, auto !important;
+}
+
+#contact *,
+.staggered-menu-panel * {
+  cursor: inherit !important;
+}
+
 /* Responsive Typography */
 @media (max-width: 1366px) and (min-width: 1024px) {
   html {
@@ -47,6 +58,21 @@ body, div, canvas, section, main {
 a, button, [role="button"], input[type="submit"], input[type="button"],
 .project-image-container, .work-card, .sm-toggle, .sm-panel-item, .sm-socials-link {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='2' fill='white'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E") 16 16, pointer !important;
+}
+
+/* Red cursor for interactive elements on white backgrounds */
+#contact a,
+#contact button,
+.staggered-menu-panel a,
+.staggered-menu-panel button,
+.staggered-menu-panel .sm-panel-item,
+.staggered-menu-panel .sm-socials-link {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='2' fill='%23d63030'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23d63030' stroke-width='1.5'/%3E%3C/svg%3E") 16 16, pointer !important;
+}
+
+/* Red cursor for menu toggle button when menu is open */
+.staggered-menu-wrapper[data-open] .sm-toggle {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='2' fill='%23d63030'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23d63030' stroke-width='1.5'/%3E%3C/svg%3E") 16 16, pointer !important;
 }
 
 a *, button *, [role="button"] *,
