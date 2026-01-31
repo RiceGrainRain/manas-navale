@@ -31,14 +31,17 @@ export default function AboutSection() {
       style={{
         position: 'relative',
         minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
         backgroundColor: '#000000',
         zIndex: 10,
-        padding: 'clamp(60px, 15vw, 120px) clamp(20px, 5vw, 40px) clamp(40px, 10vw, 80px)',
+        padding: 'clamp(60px, 10vh, 100px) clamp(20px, 5vw, 40px) clamp(80px, 12vh, 120px)',
         borderRadius: '50% 50% 0 0 / 80px 80px 0 0',
         marginTop: 'clamp(-40px, -10vw, -80px)',
+        overflowY: 'auto',
       }}
     >
-      <div ref={contentRef} style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div ref={contentRef} style={{ maxWidth: '800px', margin: '0 auto', width: '100%', paddingBottom: '20px' }}>
         <h2
           style={{
             fontSize: '14px',

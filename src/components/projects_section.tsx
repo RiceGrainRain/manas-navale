@@ -19,12 +19,13 @@ const projects: Project[] = [
     number: "01",
     title: "VAGABOND",
     year: "2026",
-    description: "My latest project! Vagabond is a real-time AI incident copilot you built using Cloudflare Workers & Durable Objects that lets teams collaborate live during outages or security incidents, chat with an LLM, and generate structured incident artifacts together in one shared room. It combines WebSockets for instant sync, Cloudflare’s AI (a LLaMA-3.3 model) for both conversational and structured playbook outputs, and a modern React/TypeScript front end, all running on scalable edge infrastructure. What makes it unique is how it blends live collaboration, durable incident state, and AI assistance into a seamless tool that feels like a live incident command center rather than just another chat with a bot.",
+    description: "My latest project! Vagabond is a real-time AI incident copilot you built using Cloudflare Workers & Durable Objects that lets teams collaborate live during outages or security incidents, chat with an LLM, and generate structured incident artifacts together in one shared room. It combines WebSockets for instant sync, Cloudflare’s AI (a LLaMA-3.3 model) for both conversational and structured playbook outputs, and a modern React/TypeScript front end, all running on scalable edge infrastructure.",
     image: "/assets/vagabond.JPG",
     link: "https://github.com/RiceGrainRain/cf_ai_vagabond/",
     tags: [
       { name: "Cloudflare Workers", color: "#F38020" },
       { name: "React", color: "#61DAFB" },
+{ name: "TypeScript", color: "#3178C6" },
       { name: "Llama", color: "#FFFFFF" },
       { name: "Wrangler", color: "#DC2626" }
     ]
@@ -67,7 +68,8 @@ const projects: Project[] = [
     link: "/projects/ethereal-portfolio",
     tags: [
       { name: "Flutter", color: "#02569B" },
-      { name: "Dart", color: "#0175C2" }
+      { name: "Dart", color: "#0175C2" },
+      { name: "Firebase", color: "#FFCA28" }
     ]
   },
   {
@@ -110,7 +112,7 @@ export default function ProjectsSection() {
       const viewportHeight = window.innerHeight;
 
       // If section hasn't entered viewport yet
-      if (sectionTop > 0) {
+      if (sectionTop > viewportHeight * 0.3) {
         setActiveProject(0);
         return;
       }
@@ -122,7 +124,11 @@ export default function ProjectsSection() {
       }
 
       // Calculate progress based on how far section has scrolled up
-      const scrollProgress = Math.abs(sectionTop) / (sectionHeight - viewportHeight);
+      // Add buffer to make transitions smoother
+      const buffer = viewportHeight * 0.2;
+      const effectiveTop = Math.max(0, Math.abs(sectionTop) - buffer);
+      const effectiveHeight = sectionHeight - viewportHeight - buffer;
+      const scrollProgress = effectiveTop / effectiveHeight;
       const newIndex = Math.floor(scrollProgress * projects.length);
       const clampedIndex = Math.min(Math.max(0, newIndex), projects.length - 1);
 
@@ -160,7 +166,12 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section ref={sectionRef} id="projects-section" className="projects-section">
+    <section
+      ref={sectionRef}
+      id="projects-section"
+      className="projects-section"
+      style={{ '--project-count': projects.length } as React.CSSProperties}
+    >
       <div className="projects-container">
         {/* Left Column - Text Panel */}
         <div className="projects-text-panel">
