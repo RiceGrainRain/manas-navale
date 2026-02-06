@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "VAGABOND",
     year: "2026",
     description: "My latest project! Vagabond is a real-time AI incident copilot you built using Cloudflare Workers & Durable Objects that lets teams collaborate live during outages or security incidents, chat with an LLM, and generate structured incident artifacts together in one shared room. It combines WebSockets for instant sync, Cloudflare’s AI (a LLaMA-3.3 model) for both conversational and structured playbook outputs, and a modern React/TypeScript front end, all running on scalable edge infrastructure.",
-    image: "/assets/vagabond.JPG",
+    image: "/assets/vagabond1.JPG",
     link: "https://github.com/RiceGrainRain/cf_ai_vagabond/",
     tags: [
       { name: "Cloudflare Workers", color: "#F38020" },
