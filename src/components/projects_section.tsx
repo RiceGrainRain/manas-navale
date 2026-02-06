@@ -65,7 +65,7 @@ const projects: Project[] = [
     year: "2023",
     description: "Vpost is my first solo coding project and a Flutter-based app that helps users discover volunteering opportunities that match their interests and goals. It brings opportunity search into a mobile experience with a clean UI and personal focus, making community engagement feel easier and more fun for people just getting started with volunteering. What makes it special is how it combines my early mobile development skills with a real-world purpose, turning something I care about into a tool that helps others connect with meaningful ways to give back.",
     image: "/assets/vpost.jpg",
-    link: "/projects/ethereal-portfolio",
+    link: "https://github.com/RiceGrainRain/vpost_2",
     tags: [
       { name: "Flutter", color: "#02569B" },
       { name: "Dart", color: "#0175C2" },
@@ -79,7 +79,7 @@ const projects: Project[] = [
     year: "2023",
     description: "Flash Notes is my first hackathon win. After spending most of our time building a rust game engine, my team pivoted towards the end of the hackathon to building Flash Notes. Flash Notes turns the notes you write into automatic study tests using GPT-3(this was a gpt wrapper way before gpt wrappers were popular), helping you quiz yourself without spending time making questions manually. ",
     image: "/assets/flashnotes.avif",
-    link: "/projects/kinetic-data-viz",
+    link: "https://devpost.com/software/flash-notes-7-1",
     tags: [
       { name: "React", color: "#61DAFB" },
       { name: "JavaScript", color: "#F7DF1E" },
